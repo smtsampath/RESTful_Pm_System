@@ -6,7 +6,7 @@ Time to complete: 18 Hours
  SDLC Steps
 #################
 
-# Requirement gathering and analysis 
+# Requirement gathering and analysis
     Step 1: Trying understand the project requirements
     Step 2: List down the main requiremts.    
 
@@ -15,13 +15,13 @@ Time to complete: 18 Hours
     Step 4: Defined the URL structure (endpoints) and HTTP methods (POST, GET)
     Step 5: Selecting a Micro-framework that support for RESTful HTTP CRUD Methods and also lighweight (Framework: Slim)
 
-# Implementation 
+# Implementation
     Step 6: Createing a database & tables
     Step 7: Creating the folder structure for project and creating the ".htaccess"
     Step 8: Start coding the Class (DbHandler, PassHash) and Main API file (Index.php)
     Step 9: Implementing the security functions "function authenticate()" 
 
-# Testing 
+# Testing (Debugginh)
     Step 10: Using "Advanced REST Client" chrome extention
     Step 11: Using terminal to varify the CURL request.
     

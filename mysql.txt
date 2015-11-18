@@ -1,0 +1,5 @@
+ Root User: adminJdyZLP9
+   Root Password: W8NbHAHPqGxD
+   Database Name: programmertest
+mysql://$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/
+https://programmertest-tsathkumara.rhcloud.com/phpmyadmin/

@@ -1,0 +1,36 @@
+body {color: #333; font-family: 'Open Sans',sans-serif; font-size: 16px; font-weight: 400;}
+h1 {font-size: 36px; color:#ffa0a0;}
+h3 {font-size: 20px; color:#ffa0a0;}
+#container {margin:0 auto; width:100%; }
+#header {margin:0 auto; width:85%; height:auto; padding: 5px;  text-align: center;}
+#content {margin:40px auto; width:85%; padding: 5px; }
+
+
+table {
+    border: 1px solid #e5e5e5;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+tr,td {
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+tr {
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 15px;
+    font-weight: normal;
+    text-align: left;
+}
+
+td {
+    border-bottom: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+}
+.curl {background: #333;}
