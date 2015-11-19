@@ -19,15 +19,19 @@
         </tr>
         <tr>
             <td colspan="5">
-                        curl -X POST
-                        -H "Content-Type: application/json"
-                        -d '{"first_name": "John", "last_name": "Doe", "email": "john-doe@gmail.com", "password": "password"}'
-                        <?php echo getBaseUrl() . 'api/endpoints/register.php'; ?>
+            ```
+                curl -X POST
+                -H "Content-Type: application/json"
+                -d '{"first_name": "John", "last_name": "Doe", "email": "john-doe@gmail.com", "password": "password"}'
+                <?php echo getBaseUrl() . 'api/endpoints/register.php'; ?>
+            ```    
             </td>
         </tr>
         <tr>
             <td colspan="5">
-                        {"error":false,"error_id":200,"error_title":"User Registered","error_message":"You are successfully registered"}
+            ```
+                {"error":false,"error_id":200,"error_title":"User Registered","error_message":"You are successfully registered"}
+            ```    
             </td>
         </tr>
         <tr>
