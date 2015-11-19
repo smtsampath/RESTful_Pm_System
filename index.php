@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>RESTful API for Private Messaging System</title>
+        <title>RESTful Back End API for Private Messaging System</title>
         <link href='css/style.css' rel='stylesheet' type='text/css'/>
         <link href="css/highlighter/desert.css" rel="stylesheet"/>
         <script src="css/highlighter/run_prettify.js"></script>
@@ -10,13 +10,13 @@
 
             /**
              * Get main or base URL 
-             * http://localhost/RESTful_Pm_System/ or http://www.developer-test.smts.me/RESTful_Pm_System
+             * http://localhost/DirName/ or http://www.yourname.com/DirName
              */
             function getBaseUrl() {
-                // output: /RESTful_Pm_System/index.php
+                // output: /FolderName/index.php
                 $currentPath = $_SERVER['PHP_SELF']; 
 
-                // output: Array ( [dirname] => /RESTful_Pm_System [basename] => index.php [extension] => php [filename] => index ) 
+                // output: Array ( [dirname] => /FolderName [basename] => index.php [extension] => php [filename] => index ) 
                 $pathInfo = pathinfo($currentPath); 
 
                 // output: localhost
@@ -25,7 +25,7 @@
                 // output: http://
                 $protocol = strtolower(substr($_SERVER["SERVER_PROTOCOL"],0,5))=='https://'?'https://':'http://';
 
-                // return: http://localhost/RESTful_Pm_System/
+                // return: http://localhost/FolderName/
                 return $protocol.$hostName.$pathInfo['dirname'];
             }
 
@@ -64,7 +64,7 @@
                                     <pre>
                                          curl -X POST<br/>
                                          -H "Content-Type: application/json"<br/>
-                                         -d '{"first_name": "John", "last_name": "Doe", "email": "info@apppartner.com", "password": "password"}'<br/>
+                                         -d '{"first_name": "John", "last_name": "Doe", "email": "john-doe@gmail.com", "password": "password"}'<br/>
                                          <?php echo getBaseUrl() . 'api/endpoints/register.php'; ?>
                                     </pre>
                                 </code>
@@ -100,7 +100,7 @@
                             <td colspan="5" class="curl">
                                 <code  class="prettyprint">
                                     <pre>
-                                        {"error":false,"first_name":"John","last_name":"Doe","email":"info@apppartner.com",<br/>
+                                        {"error":false,"first_name":"John","last_name":"Doe","email":"john-doe@gmail.com",<br/>
                                         "apiKey":"6d4d3ca9ce063b423662c21d44cb1ee4","created_at":"2015-11-18 14:05:23"}
                                     </pre>
                                 </code>
@@ -155,7 +155,9 @@
                         <tr>
                             <td colspan="5" class="curl">
                                 <code  class="prettyprint">
-                                    <pre>{"error":false,"error_id":200,"error_title":"Message Sent","error_message":"Message was sent successfully"}</pre>
+                                    <pre>{"error":false,"users":[<br/>                                  
+                                    {"user_id":1,"email":"thushara@hotmail.com","first_name":"Thushara","last_name":"Sathkumara"},<br/>
+                                    {"user_id":2,"email":"tcolligan@gmail.com","first_name":"Thomas","last_name":"Colligan"}]}</pre>
                                 </code>
                             </td>
                         </tr>

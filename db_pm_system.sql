@@ -67,9 +67,9 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`user_id`, `email`, `first_name`, `last_name`, `password_hash`, `api_key`, `status`, `created_at`) VALUES
-(1, 'smtsampath@hotmail.com', 'Thushara', 'Sathkumara', '$2a$10$b82f4f796fa013bc1cba8eneJbPREDb9rEHpkZ/oUx4D5NB4yaPRW', 'b60a2fc8c0a50221855f2abbf0aadace', 1, '2015-11-19 01:47:30'),
-(2, 'tcolligan@apppartner.com', 'Thomas', 'Colligan', '$2a$10$dbb5cc93e6114acfe7337uU5/VToaSHpLysWsPuCgq1FpXGgWCkLC', 'fd15b487f194bee4f552975ee59fd367', 1, '2015-11-19 01:49:37'),
-(3, 'jgreen@apppartner.com', 'Jake', 'Green', '$2a$10$5a3548fd299f381160870ebb71dyW4qRx6HIzh9wgm91jAS6giRBq', '1a5dfd07a5acd60ebd04d8065a6de8fa', 1, '2015-11-19 01:50:31');
+(1, 'thushara@hotmail.com', 'Thushara', 'Sathkumara', '$2a$10$b82f4f796fa013bc1cba8eneJbPREDb9rEHpkZ/oUx4D5NB4yaPRW', 'b60a2fc8c0a50221855f2abbf0aadace', 1, '2015-11-19 01:47:30'),
+(2, 'tcolligan@gmail.com', 'Thomas', 'Colligan', '$2a$10$dbb5cc93e6114acfe7337uU5/VToaSHpLysWsPuCgq1FpXGgWCkLC', 'fd15b487f194bee4f552975ee59fd367', 1, '2015-11-19 01:49:37'),
+(3, 'jgreen@gmail.com', 'Jake', 'Green', '$2a$10$5a3548fd299f381160870ebb71dyW4qRx6HIzh9wgm91jAS6giRBq', '1a5dfd07a5acd60ebd04d8065a6de8fa', 1, '2015-11-19 01:50:31');
 
 -- --------------------------------------------------------
 

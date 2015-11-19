@@ -1,47 +1,159 @@
-Name : Thushara Sathkumara
+# RESTful Back End API for Private Messaging System
 
-Time to complete: 18 Hours
+<hr/>
 
-#################
- SDLC Steps
-#################
+<h3>API URL Structure, CURL Request AND JSON Response</h3></
 
-Requirement gathering and analysis 
-    Step 1: Trying understand the project requirements
-    Step 2: List down the main requiremts.    
 
-Design
-    Step 3: Start Creating the database diagram (Tool: MYSQL Workbench)
-    Step 4: Defined the URL structure (endpoints) and HTTP methods (POST, GET)
-    Step 5: Selecting a Micro-framework that support for RESTful HTTP CRUD Methods and also lighweight (Framework: Slim)
+<table>
+    <tbody>
+        <tr>
+            <td><strong>URL</strong></td>
+            <td><strong>Method</strong></td>
+            <td><strong>Parameters</strong></td>
+            <td><strong>Authorization</strong></td>
+            <td><strong>Description</strong></td>
+        </tr>
+        <tr>
+            <td><?php echo getBaseUrl() . 'api/endpoints/register.php'; ?></td>
+            <td>POST</td>
+            <td>first_name, last_name, email, password</td>
+            <td></td>
+            <td>User Registration</td>
+        </tr>
+        <tr>
+            <td colspan="5" class="curl">
+                <code  class="prettyprint">
+                    <pre>
+                         curl -X POST<br/>
+                         -H "Content-Type: application/json"<br/>
+                         -d '{"first_name": "John", "last_name": "Doe", "email": "info@apppartner.com", "password": "password"}'<br/>
+                         <?php echo getBaseUrl() . 'api/endpoints/register.php'; ?>
+                    </pre>
+                </code>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5" class="curl">
+                <code  class="prettyprint">
+                    <pre>{"error":false,"error_id":200,"error_title":"User Registered","error_message":"You are successfully registered"}</pre>
+                </code>
+            </td>
+        </tr>
+        <tr>
+            <td><?php echo getBaseUrl() . 'api/endpoints/login.php'; ?></td>
+            <td>POST</td>
+            <td>email, password</td>
+            <td></td>
+            <td>User Login</td>
+        </tr>
+        <tr>
+            <td colspan="5" class="curl">
+                <code  class="prettyprint">
+                    <pre>
+                         curl -X POST<br/>
+                         -H "Content-Type: application/json"<br/>
+                         -d '{"email": "info@apppartner.com", "password": "password"}'<br/>
+                         <?php echo getBaseUrl() . 'api/endpoints/login.php'; ?>
+                    </pre>
+                </code>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5" class="curl">
+                <code  class="prettyprint">
+                    <pre>
+                        {"error":false,"first_name":"John","last_name":"Doe","email":"info@apppartner.com",<br/>
+                        "apiKey":"6d4d3ca9ce063b423662c21d44cb1ee4","created_at":"2015-11-18 14:05:23"}
+                    </pre>
+                </code>
+            </td>
+        </tr>
+        <tr>
+            <td><?php echo getBaseUrl() . 'api/endpoints/send_message.php'; ?></td>
+            <td>POST</td>
+            <td>sender_user_id, receiver_user_id, message</td>
+            <td>Api Key</td>
+            <td>Send a message one user to another</td>
+        </tr>
+        <tr>
+            <td colspan="5" class="curl">
+                <code  class="prettyprint">
+                    <pre>
+                         curl -X POST<br/>
+                         -H "Authorization: e64e0792874cfa8abecda2ff33122953"<br/>
+                         -H "Content-Type: application/json"<br/>
+                         -d '{"sender_user_id": "1", "receiver_user_id": "2", "message": "Example text"}'<br/>
+                         <?php echo getBaseUrl() . 'api/endpoints/send_message.php'; ?>
+                    </pre>
+                </code>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5" class="curl">
+                <code  class="prettyprint">
+                    <pre>{"error":false,"error_id":200,"error_title":"Message Sent","error_message":"Message was sent successfully"}</pre>
+                </code>
+            </td>
+        </tr>
+        <tr>
+            <td><?php echo getBaseUrl() . 'api/endpoints/list_all_users.php'; ?></td>
+            <td>GET</td>
+            <td></td>
+            <td>Api Key</td>
+            <td>Listing all Users excluding requester</td>
+        </tr>
+        <tr>
+            <td colspan="5" class="curl">
+                <code  class="prettyprint">
+                    <pre>
+                         curl -X GET<br/>
+                         -H "Authorization: e64e0792874cfa8abecda2ff33122953"<br/>
+                         -H "Content-Type: application/json"<br/>
+                         <?php echo getBaseUrl() . 'api/endpoints/list_all_users.php'; ?>
+                    </pre>
+                </code>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5" class="curl">
+                <code  class="prettyprint">
+                    <pre>{"error":false,"users":[<br/>                                  
+                    {"user_id":1,"email":"smtsampath@hotmail.com","first_name":"Thushara","last_name":"Sathkumara"},<br/>
+                    {"user_id":2,"email":"tcolligan@apppartner.com","first_name":"Thomas","last_name":"Colligan"}]}</pre>
+                </code>
+            </td>
+        </tr>
+       <tr>
+            <td><?php echo getBaseUrl() . 'api/endpoints/view_messages.php/user=:id'; ?></td>
+            <td>GET</td>
+            <td></td>
+            <td>Api Key</td>
+            <td>Listing all messages between two users</td>
+        </tr>
+        <tr>
+            <td colspan="5" class="curl">
+                <code  class="prettyprint">
+                    <pre>
+                         curl -X GET <br/>
+                         -H "Authorization: e64e0792874cfa8abecda2ff33122953"<br/>
+                         -H "Content-Type: application/json"<br/>
+                         <?php echo getBaseUrl() . 'api/endpoints/view_messages.php/user=2'; ?>
+                    </pre>
+                </code>  
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5" class="curl">
+                <code  class="prettyprint">
+                    <pre>
+                        {"error":false,"messages":[<br/>
+                        {"message_id":1,"sender_user_id":1,"receiver_user_id":2,"message":"Hey what is up?","epoch":1447828446},<br/>
+                        {"message_id":2,"sender_user_id":2,"receiver_user_id":1,"message":"Not much, how are you doing?","epoch":1447828506}]}
+                    </pre>
+                </code>
+            </td>
+        </tr>
+    </tbody>
 
-Implementation 
-    Step 6: Createing a database & tables
-    Step 7: Creating the folder structure for project and creating the ".htaccess"
-    Step 8: Start coding the Class (DbHandler, PassHash) and Main API file (Index.php)
-    Step 9: Implementing the security functions "function authenticate()" 
-
-Testing 
-    Step 10: Using "Advanced REST Client" chrome extention
-    Step 11: Using terminal to varify the CURL request.
-    
-Deployment
-    Step 12: Creating a Openshift application (MySQL 5.5, PHP 5.4, phpMyAdmin 4.0) 
-    Step 13: Using Git command push files to the Openshift server
-    Step 14: URL - programmertest-tsathkumara.rhcloud.comchange
-    
-#################
-
-LINK : http://developer-test.smts.me/api/endpoints/register.php 
-
-#################
- Issues
-#################
-
-1. current ednpoints display the file extention (eg: http://developer-test.smts.me/api/endpoints/register.php ). 
-    - Since this is a API showing file extention is not good. we can add routes without ".php"
-        eg: 
-            http://developer-test.smts.me/api/endpoints/register
-            http://developer-test.smts.me/api/endpoints/login
-            
-2. I add a random created api_key to user table. so each time user rgister it will generate unique api key for each user.when user request get methods api requred a api key. this will give extra security for the app and the api.
+</table>             
