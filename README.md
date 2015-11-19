@@ -1,10 +1,6 @@
 # RESTful Back End API for Private Messaging System
 
-<hr/>
-
 <h3>API URL Structure, CURL Request AND JSON Response</h3>
-
-
 <table>
     <tbody>
         <tr>
