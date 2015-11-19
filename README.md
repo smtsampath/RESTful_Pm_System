@@ -21,7 +21,8 @@
 * JSON Response -
 
     ```    
-    {"error":false,"error_id":200,"error_title":"User Registered","error_message":"You are successfully registered"}
+    {"error":false,"error_id":200,"error_title":"User Registered",
+    "error_message":"You are successfully registered"}
     ```   
 
 /////////////////////////////////////////////////////////////////////////   
