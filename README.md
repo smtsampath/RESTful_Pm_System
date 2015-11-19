@@ -2,7 +2,7 @@
 
 <hr/>
 
-<h3>API URL Structure, CURL Request AND JSON Response</h3></
+<h3>API URL Structure, CURL Request AND JSON Response</h3>
 
 
 <table>
