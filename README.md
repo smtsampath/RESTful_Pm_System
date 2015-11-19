@@ -3,6 +3,7 @@
 ##### API URL Structure, CURL Request & JSON Response #####
 
 ///////////////////////////////////////////////////////////////////////// 
+
 <strong>User Registration</strong>
 
 * URL - http://localhost/RESTful_Pm_System/api/endpoints/register.php 
@@ -22,7 +23,8 @@
     {"error":false,"error_id":200,"error_title":"User Registered","error_message":"You are successfully registered"}
     ```   
 
-/////////////////////////////////////////////////////////////////////////    
+/////////////////////////////////////////////////////////////////////////   
+
 <strong>User Login</strong>
 
 * URL - http://localhost/RESTful_Pm_System/api/endpoints/login.php 
