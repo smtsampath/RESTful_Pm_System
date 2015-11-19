@@ -1,6 +1,8 @@
-# RESTful Back End API for Private Messaging System
+## RESTful Back End API for Private Messaging System ##
 
-<h3>API URL Structure, CURL Request AND JSON Response</h3>
+#### API URL Structure, CURL Request AND JSON Response ####
+
+* URL - ` <?php echo getBaseUrl() . 'api/endpoints/register.php'; ?> `
 <table>
     <tbody>
         <tr>
